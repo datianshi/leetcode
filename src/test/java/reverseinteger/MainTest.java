@@ -24,4 +24,10 @@ public class MainTest {
         Assert.assertEquals(321, main.reverse(123));
         Assert.assertEquals(-321, main.reverse(-123));
     }
+
+    @Test
+    public void testIsPalindrome(){
+        Assert.assertTrue(main.isPalindrome(121));
+        Assert.assertTrue(main.isPalindrome(-2147447412));
+    }
 }

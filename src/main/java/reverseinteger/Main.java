@@ -8,6 +8,7 @@ package reverseinteger;
  * To change this template use File | Settings | File Templates.
  */
 public class Main {
+
     public int reverse(int x) {
         int original = x;
         int retVal = 0;
@@ -17,5 +18,19 @@ public class Main {
             original = original/10;
         }
        return retVal;
+    }
+
+    public boolean isPalindrome(int x) {
+        if(x < 0){
+            return false;
+        }
+        int original = x;
+        int retVal = 0;
+        while(original != 0){
+            int remainder = original % 10;
+            retVal = retVal * 10 + remainder;
+            original = original/10;
+        }
+        return retVal == x;
     }
 }
